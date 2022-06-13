@@ -318,7 +318,7 @@ as \textbf{magic}.
        k ~ Exponential(meanK) 
 
        for i in 1:length(isi)
-       	   isi[i] ~ Gamma(l,k)
+       	   isi[i] ~ Gamma(k,l)
        end	   
 
 end
@@ -357,7 +357,10 @@ but didn't we say
 \vskip 1cm
 \cblu$\bar{\lambda}=0.0093$\cbla{} and \cblu$\bar{k}=0.8861$\cbla.
 \vskip 1cm
-and by optimizing the log-pdf
+and by optimizing the log-pdf\crish
+$$
+L=\sum_i \log{p(\cpur\delta t_i\crish|\cblu{}\lambda\crish,\cblu{}k\crish)}$$
+\cbla{}over $\cblu{}\lambda\crish,\cblu{}k\crish$.\cbla{} This gives
 \cblu
   $$\lambda\approx 0.092\text{ s}$$
   \cbla{}and \cblu
