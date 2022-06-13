@@ -1,0 +1,1 @@
+p=Gadfly.plot(x=chain[:k],Geom.density,Guide.xlabel("k"), Theme(background_color=color("white")))
